@@ -1,0 +1,289 @@
+:root {
+    --blue: #013b70;
+    --yellow: #ffce00;
+    color: black;
+    font-size: 18px;
+    font-family: 'Consolas', 'Courier New', 'Monospace';
+}
+  
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html {
+    box-sizing: border-box;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    scroll-behavior: smooth;
+}
+
+/* NAVIGATION */
+
+/* https://stackoverflow.com/questions/72191566/how-can-i-position-two-elements-close-to-each-other-in-a-flexbox-navigation-bar */
+
+
+
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+    align-items: center;
+    gap: 0;
+    background-color: var(--blue);
+    padding: 0rem 12rem;
+}
+
+.navbar .push-left {
+    color: white;
+    padding: 1rem;
+    margin-right: auto;
+}
+
+.navbar a {
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.25s;
+}
+
+.navbar a:hover {
+    color: black;
+    background-color: var(--yellow);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3)
+}
+
+@media (max-width: 1050px) {
+    .navbar .push-left {
+        display: none;
+        width: 0%;
+    }
+    .navbar {
+        justify-content: center;
+    }
+
+}
+
+/* HEADER */
+
+#club-container {
+    background-image: url('gabriel-heinzer-g5jpH62pwes-unsplash.png');
+    background-color: lightgray;    
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    box-shadow: inset 0px 0px 25px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 5px 25px 15px rgba(0, 0, 0, 0.15);
+    color: white;
+    z-index: 2;
+}
+
+.header-img {
+    height: 100%;
+    background-image: url('gabriel-heinzer-g5jpH62pwes-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+#club-title {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#club-description {
+    font-size: 1.5rem;
+    padding: 8rem 12rem;
+}
+
+#club-description h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#club-description h3 {
+    font-weight: 100;
+}
+
+@media (max-width: 1200px) {
+    #club-description {
+        padding: 8rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    #club-description {
+        padding: 8rem 6rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #club-description {
+        padding: 6rem 4rem;
+    }
+}
+
+@media (max-width: 650px) {
+    #club-title {
+        font-size: 1.5rem;
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+
+    #club-description h1 {
+        font-size: 2rem;
+    }
+    #club-description h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* FORM */
+
+#join-section {
+    padding: 4rem 24rem;
+}
+
+#join-header {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+#form-container {
+    border-radius: 10px;
+    border-style: solid;
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 1300px) {
+    #join-section {
+        padding: 4rem 16rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    #join-section {
+        padding: 4rem 12rem;
+    }
+}
+
+@media (max-width: 900px) {
+    #join-section {
+        padding: 4rem 8rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #join-section {
+        padding: 4rem;
+    }
+}
+
+#form-header {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--yellow);
+    padding: 1.5rem 3rem;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-inputs {
+    margin: 4rem;
+}
+
+.form-inputs #name, #id-number, #email {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.form-inputs textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 6rem;
+    max-height: 18rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    border-width: 2px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15)
+}
+
+.submit {
+    display: flex;
+    margin: auto;
+    background-color: var(--yellow);
+    padding: 0.5rem 3rem;
+    border-radius: 5px;
+    transition: 0.25s;
+    font-family: 'Consolas', 'Courier New', 'Monospace';
+    font-weight: bolder;
+}
+
+.submit:hover {
+    color: white; background-color: var(--blue); 
+    border-color: white;
+}
+
+/* footer */
+
+footer {
+    box-shadow: inset 0px 0px 25px 3px rgba(0, 0, 0, 0.3);
+    background-color: var(--blue);
+    padding: 4rem 12rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+
+
+footer .push-right {
+    margin-left: auto;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        padding: 4rem 8rem;
+    }
+}
+
+@media (max-width: 800px) {
+    footer {
+        padding: 4rem;
+    }
+}
+
+@media (max-width: 650px) {
+    footer .push-right {
+        display: none;
+    }
+    footer .left-element {
+        text-align: center;
+        margin: auto;
+    }
+}
