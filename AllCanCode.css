@@ -70,7 +70,7 @@ html {
 /* HEADER */
 
 #club-container {
-    background-image: url('gabriel-heinzer-g5jpH62pwes-unsplash.png');
+    background-image: url('gabriel-heinzer-g5jpH62pwes-unsplash\ \(blurred\).png');
     background-color: lightgray;    
     background-color: rgba(0, 0, 0, 0.4);
     background-size: 100vw;
@@ -82,15 +82,6 @@ html {
     box-shadow: 0px 5px 25px 15px rgba(0, 0, 0, 0.15);
     color: white;
     z-index: 2;
-}
-
-.header-img {
-    height: 100%;
-    background-image: url('gabriel-heinzer-g5jpH62pwes-unsplash.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-
 }
 
 #club-title {
