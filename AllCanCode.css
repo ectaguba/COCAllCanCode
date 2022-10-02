@@ -5,6 +5,7 @@
     font-size: 18px;
     font-family: 'Consolas', 'Courier New', 'Monospace';
 }
+
   
 * { 
     margin: 0;
@@ -20,24 +21,21 @@ html {
 
 /* NAVIGATION */
 
-/* https://stackoverflow.com/questions/72191566/how-can-i-position-two-elements-close-to-each-other-in-a-flexbox-navigation-bar */
-
-
-
 .navbar {
     display: flex;
     position: fixed;
     width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     gap: 0;
     background-color: var(--blue);
-    padding: 0rem 12rem;
+    padding: 0rem 1rem;
 }
 
 .navbar .push-left {
+    display: none;
     color: white;
     padding: 1rem;
     margin-right: auto;
@@ -55,18 +53,6 @@ html {
     background-color: var(--yellow);
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3)
 }
-
-@media (max-width: 1050px) {
-    .navbar .push-left {
-        display: none;
-        width: 0%;
-    }
-    .navbar {
-        justify-content: center;
-    }
-
-}
-
 /* HEADER */
 
 #club-container {
@@ -85,16 +71,15 @@ html {
 }
 
 #club-title {
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-align: center;
-    padding-top: 8rem;
-    padding-bottom: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
 #club-description {
-    font-size: 1.5rem;
-    padding: 8rem 12rem;
+    padding: 3rem 1.5rem;
 }
 
 #club-description h1 {
@@ -106,51 +91,16 @@ html {
     font-weight: 100;
 }
 
-@media (max-width: 1200px) {
-    #club-description {
-        padding: 8rem;
-    }
-}
-
-@media (max-width: 1000px) {
-    #club-description {
-        padding: 8rem 6rem;
-    }
-}
-
-@media (max-width: 800px) {
-    #club-description {
-        padding: 6rem 4rem;
-    }
-}
-
-@media (max-width: 650px) {
-    #club-title {
-        font-size: 1.5rem;
-        padding-top: 6rem;
-        padding-bottom: 3rem;
-    }
-
-    #club-description h1 {
-        font-size: 2rem;
-    }
-    #club-description h3 {
-        font-size: 1.5rem;
-    }
-}
-
-
 /* FORM */
 
+
 #join-section {
-    padding: 4rem 24rem;
+    padding: 3rem 1.5rem;
 }
 
 #join-header {
-    font-size: 1.25rem;
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 #form-container {
@@ -159,31 +109,6 @@ html {
     background-color: #f3f3f3;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     margin: auto;
-    padding-bottom: 1rem;
-}
-
-@media (max-width: 1300px) {
-    #join-section {
-        padding: 4rem 16rem;
-    }
-}
-
-@media (max-width: 1100px) {
-    #join-section {
-        padding: 4rem 12rem;
-    }
-}
-
-@media (max-width: 900px) {
-    #join-section {
-        padding: 4rem 8rem;
-    }
-}
-
-@media (max-width: 700px) {
-    #join-section {
-        padding: 4rem;
-    }
 }
 
 #form-header {
@@ -198,7 +123,12 @@ html {
 }
 
 .form-inputs {
-    margin: 4rem;
+    margin: 2rem;
+}
+
+.form-inputs input, textarea {
+    font-size: 1rem;
+    padding: 0.5rem;
 }
 
 .form-inputs #name, #id-number, #email {
@@ -215,22 +145,21 @@ html {
     min-width: 100%;
     max-width: 100%;
     min-height: 6rem;
-    max-height: 18rem;
-    margin-bottom: 2rem;
+    max-height: 12rem;
+    margin-bottom: 1rem;
     border-radius: 5px;
     border-width: 2px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15)
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 .submit {
-    display: flex;
-    margin: auto;
     background-color: var(--yellow);
-    padding: 0.5rem 3rem;
-    border-radius: 5px;
-    transition: 0.25s;
     font-family: 'Consolas', 'Courier New', 'Monospace';
     font-weight: bolder;
+    display: flex;
+    margin: auto;
+    border-radius: 5px;
+    transition: 0.25s;
 }
 
 .submit:hover {
@@ -243,38 +172,17 @@ html {
 footer {
     box-shadow: inset 0px 0px 25px 3px rgba(0, 0, 0, 0.3);
     background-color: var(--blue);
-    padding: 4rem 12rem;
+    padding: 4rem 2rem;
     color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
+    text-align: center;
 }
-
 
 footer .push-right {
+    display: none;
     margin-left: auto;
-}
-
-@media (max-width: 1000px) {
-    footer {
-        padding: 4rem 8rem;
-    }
-}
-
-@media (max-width: 800px) {
-    footer {
-        padding: 4rem;
-    }
-}
-
-@media (max-width: 650px) {
-    footer .push-right {
-        display: none;
-    }
-    footer .left-element {
-        text-align: center;
-        margin: auto;
-    }
-}
+}   
