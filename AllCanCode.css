@@ -34,11 +34,22 @@ html {
     padding: 0rem 1rem;
 }
 
+@media only screen and (max-width: 768px) { 
+    .navbar {
+        justify-content: center;
+    }
+}
+
 .navbar .push-left {
-    display: none;
     color: white;
     padding: 1rem;
     margin-right: auto;
+}
+
+@media only screen and (max-width: 768px) { 
+    .navbar .push-left {
+        display: none;
+    }
 }
 
 .navbar a {
@@ -53,6 +64,7 @@ html {
     background-color: var(--yellow);
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3)
 }
+
 /* HEADER */
 
 #club-container {
@@ -69,9 +81,13 @@ html {
     color: white;
     z-index: 2;
 }
+@media only screen and (min-width: 480px) {
+    #club-container {
+        font-size: 1.2rem;
+    }    
+}
 
 #club-title {
-    font-size: 1.3rem;
     text-align: center;
     padding-top: 6rem;
     padding-bottom: 2rem;
@@ -82,7 +98,13 @@ html {
     padding: 3rem 1.5rem;
 }
 
-#club-description h1 {
+@media only screen and (min-width: 480px) {
+    #club-description {
+        padding: 4rem 2rem;
+    }
+}
+
+#club-description h2 {
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -93,9 +115,15 @@ html {
 
 /* FORM */
 
-
 #join-section {
     padding: 3rem 1.5rem;
+}
+
+@media only screen and (min-width: 480px) {
+    #join-section {
+        font-size: 1.2rem;
+        padding: 4rem 2rem;
+    }
 }
 
 #join-header {
@@ -111,11 +139,17 @@ html {
     margin: auto;
 }
 
+@media only screen and (min-width: 480px) {
+    #form-container {
+        width: 90%;
+    }
+}
+
 #form-header {
     font-size: 1.5rem;
     text-align: center;
     background-color: var(--yellow);
-    padding: 1.5rem 3rem;
+    padding: 2rem 0;
     border-radius: 8px;
     border-style: solid;
     border-width: 0px 0px 1px 0px;
@@ -124,6 +158,12 @@ html {
 
 .form-inputs {
     margin: 2rem;
+}
+
+@media only screen and (min-width: 480px) {
+    .form-inputs {
+        padding: 1rem 2rem;
+    }
 }
 
 .form-inputs input, textarea {
