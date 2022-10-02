@@ -34,9 +34,21 @@ html {
     padding: 0rem 1rem;
 }
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 769px) { 
     .navbar {
         justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .navbar {
+        padding: 0 4rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .navbar {
+        padding: 0 8rem;
     }
 }
 
@@ -46,7 +58,7 @@ html {
     margin-right: auto;
 }
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 769px) { 
     .navbar .push-left {
         display: none;
     }
@@ -82,9 +94,14 @@ html {
     z-index: 2;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 481px) {
     #club-container {
         font-size: 1.2rem;
+    }    
+}
+@media only screen and (min-width: 769px) {
+    #club-container {
+        font-size: 1.4rem;
     }    
 }
 
@@ -99,9 +116,21 @@ html {
     padding: 3rem 1.5rem;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 481px) {
     #club-description {
         padding: 4rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #club-description {
+        padding: 4rem 4rem;
+    }    
+}
+
+@media only screen and (min-width: 1025px) {
+    #club-description {
+        padding: 4rem 8rem;
     }
 }
 
@@ -120,10 +149,22 @@ html {
     padding: 3rem 1.5rem;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 481px) {
     #join-section {
         font-size: 1.2rem;
         padding: 4rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #join-section {
+        padding: 4rem 6rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    #join-section {
+        padding: 4rem 10rem;        
     }
 }
 
@@ -140,9 +181,15 @@ html {
     margin: auto;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 481px) {
     #form-container {
         width: 90%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #form-container {
+        width: 75%;
     }
 }
 
@@ -161,7 +208,7 @@ html {
     margin: 2rem;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 481px) {
     .form-inputs {
         padding: 1rem 2rem;
     }
@@ -194,6 +241,8 @@ html {
 }
 
 .submit {
+    color: black;
+    border-color: black;
     background-color: var(--yellow);
     font-family: 'Consolas', 'Courier New', 'Monospace';
     font-weight: bolder;
@@ -227,7 +276,7 @@ footer .push-right {
     margin-left: auto;
 }   
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
     footer {
         justify-content: center;
     }
@@ -235,4 +284,16 @@ footer .push-right {
         display: none;
         margin-left: auto;
     }  
+}
+
+@media only screen and (min-width: 769px) {
+    footer {
+        padding: 4rem 4rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    footer {
+        padding: 4rem 8rem;
+    }
 }
