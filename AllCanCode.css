@@ -81,6 +81,7 @@ html {
     color: white;
     z-index: 2;
 }
+
 @media only screen and (min-width: 480px) {
     #club-container {
         font-size: 1.2rem;
@@ -218,11 +219,20 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     text-align: center;
 }
 
 footer .push-right {
-    display: none;
     margin-left: auto;
 }   
+
+@media only screen and (max-width: 768px) {
+    footer {
+        justify-content: center;
+    }
+    footer .push-right {
+        display: none;
+        margin-left: auto;
+    }  
+}
